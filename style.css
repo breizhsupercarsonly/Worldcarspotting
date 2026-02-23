@@ -1,0 +1,223 @@
+/* RESET PROPRE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BASE */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #0f0f0f;
+    color: #f5f5f5;
+    line-height: 1.6;
+}
+
+/* HEADER */
+header {
+    background: #111;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #222;
+}
+
+header h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 28px;
+    letter-spacing: 2px;
+    color: #ffffff;
+}
+
+nav a {
+    color: #ccc;
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #e10600; /* rouge performance */
+}
+
+/* SECTION HERO */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(to bottom, #111, #1a1a1a);
+}
+
+.hero h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 42px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.hero p {
+    max-width: 600px;
+    margin: auto;
+    color: #aaa;
+}
+
+/* BOUTONS PRO */
+.btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 14px 35px;
+    background: #e10600;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: 0.3s;
+    box-shadow: 0 4px 15px rgba(225, 6, 0, 0.3);
+}
+
+.btn:hover {
+    background: #ff1a1a;
+    transform: translateY(-3px);
+}
+
+/* GRID PHOTOS */
+.grid {
+    padding: 80px 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+/* CARTES ENCADRÉES */
+.card {
+    background: #1a1a1a;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
+    transition: 0.3s;
+    border: 1px solid #222;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    border-color: #e10600;
+}
+
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card h3 {
+    font-family: 'Oswald', sans-serif;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.card p {
+    color: #aaa;
+    font-size: 14px;
+}
+
+/* BOUTON DANS CARTE */
+.card .btn-small {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 18px;
+    background: transparent;
+    border: 1px solid #e10600;
+    border-radius: 6px;
+    color: #e10600;
+    text-decoration: none;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.card .btn-small:hover {
+    background: #e10600;
+    color: white;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 30px;
+    background: #111;
+    border-top: 1px solid #222;
+    color: #777;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .hero h2 {
+        font-size: 28px;
+    }
+
+    .grid {
+        padding: 50px 20px;
+    }
+}
+.upload-form {
+    max-width: 600px;
+    margin: 80px auto;
+    background: #1a1a1a;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+}
+
+.form-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.upload-form input,
+.upload-form select,
+.upload-form textarea {
+    padding: 12px 15px;
+    border-radius: 8px;
+    border: 1px solid #333;
+    background: #111;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.upload-form input:focus,
+.upload-form select:focus,
+.upload-form textarea:focus {
+    border-color: #e10600;
+    outline: none;
+}
+
+.btn-upload {
+    margin-top: 15px;
+    padding: 14px;
+    background: #e10600;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-upload:hover {
+    background: #ff1a1a;
+    transform: translateY(-2px);
+}

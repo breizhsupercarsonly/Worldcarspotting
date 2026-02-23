@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Classement CarSpotting V4 Pro</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Oswald:wght@500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+<h1>Classement CarSpotting</h1>
+<nav>
+<a href="index.html">Classement</a>
+<a href="vote.html">Duel</a>
+<a href="upload.html">Upload</a>
+<a href="profile.html">Mon Profil</a>
+</nav>
+</header>
+<main>
+<section>
+<h2>Classement</h2>
+<select id="filter">
+<option value="all">Monde</option>
+<option value="day">Aujourd'hui</option>
+<option value="month">Ce mois</option>
+</select>
+<ul id="rankingList"></ul>
+</section>
+</main>
+
+<script>
+function loadRanking() {
+const rankingList = document.getElementById("rankingList");
+const cars = JSON.parse(localStorage.getItem("cars")) || [];
+// Trier par score descendant
+const sorted = cars.sort((a,b)=>b.score - a.score);
+rankingList.innerHTML = "";
+sorted.forEach(c=>{
+const li = document.createElement("li");
+li.textContent = `${c.name} (${c.city}, ${c.country}) - ${c.score} pts - Rareté: ${c.rarity}`;
+rankingList.appendChild(li);
+});
+}
+
+document.addEventListener("DOMContentLoaded", loadRanking);
+</script>
+</body>
+</html>

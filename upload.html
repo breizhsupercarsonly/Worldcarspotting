@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Upload Voiture – CarSpotting V4 Pro</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+<h1>Upload Voiture</h1>
+<nav>
+<a href="index.html">Classement</a>
+<a href="vote.html">Duel</a>
+<a href="upload.html">Upload</a>
+<a href="profile.html">Mon Profil</a>
+</nav>
+</header>
+<main>
+<section class="upload-form">
+<h2>Ajouter une voiture</h2>
+
+<div class="form-grid">
+
+    <!-- MARQUE -->
+   <input list="brandList" id="carBrand" placeholder="Choisir ou taper une marque">
+<datalist id="brandList"></datalist>
+
+    <!-- MODELE -->
+    <input list="modelList" id="carModel" placeholder="Choisir un modèle" disabled>
+<datalist id="modelList"></datalist>
+
+    <!-- COULEUR -->
+    <input type="text" id="carColor" placeholder="Couleur">
+
+    <!-- ANNEE -->
+    <input type="number" id="carYear" placeholder="Année (facultatif)">
+
+    <!-- VILLE -->
+    <input list="citiesList" id="carCity" placeholder="Ville">
+    <datalist id="citiesList"></datalist>
+
+    <!-- PAYS -->
+    <input type="text" id="carCountry" placeholder="Pays">
+
+    <!-- IMAGE -->
+    <input type="url" id="carImg" placeholder="URL de l'image">
+
+    <!-- DESCRIPTION -->
+    <textarea id="carDesc" placeholder="Description facultative"></textarea>
+
+    <button class="btn-upload" onclick="uploadCar()">Uploader</button>
+
+</div>
+</section>
